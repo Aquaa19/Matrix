@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MatrixCalculator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#007BFF</item>
+        <item name="colorPrimaryVariant">#0056B3</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">#6C757D</item>
+        <item name="colorSecondaryVariant">#5A6268</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:windowBackground">#121212</item> <item name="colorSurface">#2C2C2C</item> <item name="colorOnSurface">@android:color/white</item> <item name="textColorPrimary">@android:color/white</item> <item name="textColorSecondary">#CCCCCC</item> <item name="colorError">#CF6679</item>
+        <item name="colorOnError">#121212</item>
+
+        <item name="colorOutline">#555555</item> <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.MaterialComponents.Subtitle1</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.MaterialComponents.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.MaterialComponents.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.MaterialComponents.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.MaterialComponents.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.MaterialComponents.Overline</item>
+
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.MediumComponent</item>
+    </style>
+
+    <style name="Theme.MatrixCalculator.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MatrixCalculator.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+
+</resources>

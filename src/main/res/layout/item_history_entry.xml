@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="?attr/colorSurface">
+
+    <LinearLayout
+        android:id="@+id/history_item_root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewOperationType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="?attr/textColorPrimary"
+                    android:text="Operation Type: Matrix Multiplication"/>
+
+                <TextView
+                    android:id="@+id/textViewTimestamp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="?attr/textColorSecondary"
+                    android:text="Time: 2024-06-17 10:30 AM"/>
+
+                <TextView
+                    android:id="@+id/textViewMatrixACollapsed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:fontFamily="monospace"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:layout_marginTop="4dp"
+                    android:text="Matrix A:\n[1 2]\n[3 4]"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewExpandArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/arrow_down"
+                app:tint="?attr/textColorSecondary"
+                android:contentDescription="Expand/Collapse" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/expanded_details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/colorOutline"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/textViewMatrixAExpanded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="monospace"
+                android:text="Matrix A (Full):\n[1 2 3]\n[4 5 6]\n[7 8 9]"/>
+
+            <TextView
+                android:id="@+id/textViewMatrixB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="monospace"
+                android:layout_marginTop="4dp"
+                android:visibility="gone"
+                android:text="Matrix B:\n[5 6]\n[7 8]"/>
+
+            <TextView
+                android:id="@+id/textViewConstants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="monospace"
+                android:layout_marginTop="4dp"
+                android:visibility="gone"
+                android:text="Constants:\n[10 20]"/>
+
+            <TextView
+                android:id="@+id/textViewResultExpanded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="?attr/colorPrimary"
+                android:fontFamily="monospace"
+                android:layout_marginTop="8dp"
+                android:text="Result:\n[20 28]\n[31 44]"/>
+
+            <TextView
+                android:id="@+id/textViewSteps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="?attr/textColorSecondary"
+                android:fontFamily="monospace"
+                android:layout_marginTop="8dp"
+                android:text="Steps:\nStep 1: ...\nStep 2: ..."/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
